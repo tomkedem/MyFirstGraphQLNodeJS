@@ -36,6 +36,12 @@ const resolvers = {
             return books;
         }
     },
+    Book: {
+      name : (parent, args, contextValue, info) => {
+        var name = parent.name;
+        return `[${name}]`;
+      }
+    }
 };
 
 // The ApolloServer constructor requires two parameters: your schema
